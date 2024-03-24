@@ -25,11 +25,17 @@ namespace AgOpenGPS
             lblTimeSlice.Text = (1 / mf.timeSliceOfLastFix).ToString("N3");
             lblHz.Text = mf.gpsHz.ToString("N1");
 
-            lblEastingField.Text = Math.Round(mf.pn.fix.easting, 1).ToString();
-            lblNorthingField.Text = Math.Round(mf.pn.fix.northing, 1).ToString();
+            lblEastingField.Text = Math.Round(mf.pn.fix.easting, 2).ToString();
+            lblNorthingField.Text = Math.Round(mf.pn.fix.northing, 2).ToString();
 
             lblLatitude.Text = mf.Latitude;
             lblLongitude.Text = mf.Longitude;
+
+            lblEastingField2.Text = Math.Round(mf.pnTwo.fix.easting, 2).ToString();
+            lblNorthingField2.Text = Math.Round(mf.pnTwo.fix.northing, 2).ToString();
+
+            lblLatitude2.Text = mf.pnTwo.latitude.ToString("N7");
+            lblLongitude2.Text = mf.pnTwo.longitude.ToString("N7");
 
             //other sat and GPS info
             lblSatsTracked.Text = mf.SatsTracked;
@@ -59,7 +65,7 @@ namespace AgOpenGPS
 
         private void FormGPSData_Load(object sender, EventArgs e)
         {
-            this.Width = 120;
+            this.Width = 250;
             this.Height = 330;
         }
 

@@ -133,6 +133,11 @@ namespace AgOpenGPS
         public CNMEA pn;
 
         /// <summary>
+        /// The NMEA class that decodes it
+        /// </summary>
+        public CNMEA pnTwo;
+
+        /// <summary>
         /// an array of sections
         /// </summary>
         public CSection[] section;
@@ -214,6 +219,11 @@ namespace AgOpenGPS
         public CAHRS ahrs;
 
         /// <summary>
+        /// Heading, Roll, Pitch, GPS, Properties
+        /// </summary>
+        public CAHRS ahrsTwo;
+
+        /// <summary>
         /// Recorded Path
         /// </summary>
         public CRecordedPath recPath;
@@ -284,8 +294,11 @@ namespace AgOpenGPS
                 new CPatches(this)
             };
 
-            //our NMEA parser
+            //our NMEA parser GPS 1
             pn = new CNMEA(this);
+
+            //our NMEA parser for GPS 2
+            pnTwo = new CNMEA(this);
 
             //create the ABLine instance
             ABLine = new CABLine(this);
@@ -314,8 +327,11 @@ namespace AgOpenGPS
             //nmea simulator built in.
             sim = new CSim(this);
 
-            ////all the attitude, heading, roll, pitch reference system
+            ////all the attitude, heading, roll, pitch reference system GPS1
             ahrs = new CAHRS();
+
+            ////all the attitude, heading, roll, pitch reference system GPS2
+            ahrsTwo = new CAHRS();
 
             //A recorded path
             recPath = new CRecordedPath(this);

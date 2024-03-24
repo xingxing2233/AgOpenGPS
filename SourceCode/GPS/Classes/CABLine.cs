@@ -47,14 +47,10 @@ namespace AgOpenGPS
 
         public vec2 desLineEndA = new vec2(0.0, 0.0);
         public vec2 desLineEndB = new vec2(999997, 1.0);
-
-        public vec2 refNudgePtA = new vec2(1, 1), refNudgePtB = new vec2(2, 2);
-
-
         public double desHeading = 0;
-
         public string desName = "";
 
+        public vec2 refNudgePtA = new vec2(1, 1), refNudgePtB = new vec2(2, 2);
 
         //autosteer errors
         public double pivotDistanceError, pivotDistanceErrorLast, pivotDerivative, pivotDerivativeSmoothed;

@@ -58,6 +58,12 @@
             this.lblFuzeHeading = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.lblAngularVelocity = new System.Windows.Forms.Label();
+            this.lblLatitude2 = new System.Windows.Forms.Label();
+            this.lblLongitude2 = new System.Windows.Forms.Label();
+            this.lblEastingField2 = new System.Windows.Forms.Label();
+            this.lblNorthingField2 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // timer1
@@ -403,12 +409,90 @@
             this.lblAngularVelocity.Text = "3.56";
             this.lblAngularVelocity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // lblLatitude2
+            // 
+            this.lblLatitude2.AutoSize = true;
+            this.lblLatitude2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLatitude2.ForeColor = System.Drawing.Color.White;
+            this.lblLatitude2.Location = new System.Drawing.Point(132, -2);
+            this.lblLatitude2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblLatitude2.Name = "lblLatitude2";
+            this.lblLatitude2.Size = new System.Drawing.Size(70, 18);
+            this.lblLatitude2.TabIndex = 524;
+            this.lblLatitude2.Text = "Latitude";
+            // 
+            // lblLongitude2
+            // 
+            this.lblLongitude2.AutoSize = true;
+            this.lblLongitude2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLongitude2.ForeColor = System.Drawing.Color.White;
+            this.lblLongitude2.Location = new System.Drawing.Point(132, 19);
+            this.lblLongitude2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblLongitude2.Name = "lblLongitude2";
+            this.lblLongitude2.Size = new System.Drawing.Size(119, 18);
+            this.lblLongitude2.TabIndex = 525;
+            this.lblLongitude2.Text = "-128.1234567";
+            // 
+            // lblEastingField2
+            // 
+            this.lblEastingField2.AutoSize = true;
+            this.lblEastingField2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEastingField2.ForeColor = System.Drawing.Color.White;
+            this.lblEastingField2.Location = new System.Drawing.Point(161, 62);
+            this.lblEastingField2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblEastingField2.Name = "lblEastingField2";
+            this.lblEastingField2.Size = new System.Drawing.Size(63, 18);
+            this.lblEastingField2.TabIndex = 529;
+            this.lblEastingField2.Text = "Easting";
+            // 
+            // lblNorthingField2
+            // 
+            this.lblNorthingField2.AutoSize = true;
+            this.lblNorthingField2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNorthingField2.ForeColor = System.Drawing.Color.White;
+            this.lblNorthingField2.Location = new System.Drawing.Point(161, 42);
+            this.lblNorthingField2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblNorthingField2.Name = "lblNorthingField2";
+            this.lblNorthingField2.Size = new System.Drawing.Size(74, 18);
+            this.lblNorthingField2.TabIndex = 528;
+            this.lblNorthingField2.Text = "Northing";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(144, 62);
+            this.label16.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(16, 18);
+            this.label16.TabIndex = 527;
+            this.label16.Text = "E";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(142, 42);
+            this.label17.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(18, 18);
+            this.label17.TabIndex = 526;
+            this.label17.Text = "N";
+            // 
             // FormGPSData
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(120, 330);
+            this.ClientSize = new System.Drawing.Size(250, 330);
+            this.Controls.Add(this.lblLatitude2);
+            this.Controls.Add(this.lblLongitude2);
+            this.Controls.Add(this.lblEastingField2);
+            this.Controls.Add(this.lblNorthingField2);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label17);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.lblAngularVelocity);
             this.Controls.Add(this.label15);
@@ -483,5 +567,11 @@
         private System.Windows.Forms.Label lblFuzeHeading;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lblAngularVelocity;
+        private System.Windows.Forms.Label lblLatitude2;
+        private System.Windows.Forms.Label lblLongitude2;
+        private System.Windows.Forms.Label lblEastingField2;
+        private System.Windows.Forms.Label lblNorthingField2;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
     }
 }

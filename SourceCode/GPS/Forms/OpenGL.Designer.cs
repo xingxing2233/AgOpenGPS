@@ -311,6 +311,23 @@ namespace AgOpenGPS
                     }
                     GL.PopMatrix();
 
+                    GL.PointSize(8);
+                    GL.Begin(PrimitiveType.Points);
+                    GL.Color3(0.0, 1.0, 0.0);
+                    GL.Vertex3(pnTwo.fix.easting, pnTwo.fix.northing, 0.0);
+                    GL.End();
+
+                    double head = glm.toRadians(pnTwo.headingTrue);
+
+                    vec3 ptA = new vec3(pnTwo.fix.easting - (Math.Sin(head) * 1), pnTwo.fix.northing - (Math.Cos(head) * 1), 0);
+                    vec3 ptB = new vec3(pnTwo.fix.easting + (Math.Sin(head) * 3), pnTwo.fix.northing + (Math.Cos(head) * 3), 0);
+
+                    GL.Begin(PrimitiveType.Lines);
+                    GL.Color3(1.0, 1.0, 0.0);
+                    GL.Vertex3(ptA.easting, ptA.northing, 0.0);
+                    GL.Vertex3(ptB.easting, ptB.northing, 0.0);
+                    GL.End();
+
                     if (camera.camSetDistance > -150)
                     {
                         if (trk.idx > -1)

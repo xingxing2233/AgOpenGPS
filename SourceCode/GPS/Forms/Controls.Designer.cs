@@ -501,7 +501,7 @@ namespace AgOpenGPS
 
                 if (isJobStarted)
                 {
-                    double distance = Math.Pow((pn.latStart - pn.latitude), 2) + Math.Pow((pn.lonStart - pn.longitude), 2);
+                    double distance = Math.Pow((CNMEA.latStart - pn.latitude), 2) + Math.Pow((CNMEA.lonStart - pn.longitude), 2);
                     distance = Math.Sqrt(distance);
                     distance *= 100;
                     if (distance > 10) TimedMessageBox(2500, "High Field Start Distance Warning", "Field Start is "

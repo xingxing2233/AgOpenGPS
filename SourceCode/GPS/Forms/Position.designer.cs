@@ -1515,8 +1515,8 @@ namespace AgOpenGPS
             {
                 if (!isJobStarted)
                 {
-                    pn.latStart = pn.latitude;
-                    pn.lonStart = pn.longitude;
+                    CNMEA.latStart = pn.latitude;
+                    CNMEA.lonStart = pn.longitude;
                     pn.SetLocalMetersPerDegree();
                 }
 
