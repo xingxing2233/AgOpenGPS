@@ -1502,10 +1502,14 @@ namespace AgOpenGPS
             {
                 if (triStrip[j].isDrawing)
                 {
+                    if (isPatchesChangingColor)
+                        triStrip[j].numTriangles = 64;
                     triStrip[j].AddMappingPoint(j);
                     patchCounter++;
                 }
             }
+
+            isPatchesChangingColor = false;
         }
 
         //the start of first few frames to initialize entire program
