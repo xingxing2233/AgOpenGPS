@@ -430,7 +430,7 @@ namespace AgIO
                     sbRTCM.Append(".");
                     lblMessages.Text = sbRTCM.ToString();
                 }
-                //btnResetTimer.Text = ((int)(180 - (secondsSinceStart - threeMinuteTimer))).ToString();
+                btnResetTimer.Text = ((int)(180 - (secondsSinceStart - threeMinuteTimer))).ToString();
             }
 
             if (focusSkipCounter != 0)
@@ -816,35 +816,6 @@ namespace AgIO
                     _ = IPA.ToString();
                     lblIP.Text += IPA.ToString() + "\r\n";
                 }
-            }
-        }
-
-        private void btnAgIO_Two_Click(object sender, EventArgs e)
-        {
-            Process[] processName = Process.GetProcessesByName("AgTwo");
-            if (processName.Length == 0)
-            {
-                //Start application here
-                DirectoryInfo di = new DirectoryInfo(Application.StartupPath);
-                string strPath = di.ToString();
-                strPath += "\\AgTwo.exe";
-                try
-                {
-                    ProcessStartInfo processInfo = new ProcessStartInfo();
-                    processInfo.FileName = strPath;
-                    processInfo.WorkingDirectory = Path.GetDirectoryName(strPath);
-                    Process proc = Process.Start(processInfo);
-                }
-                catch
-                {
-                    TimedMessageBox(2000, "No File Found", "Can't Find AgTwo");
-                }
-            }
-            else
-            {
-                //Set foreground window
-                ShowWindow(processName[0].MainWindowHandle, 9);
-                SetForegroundWindow(processName[0].MainWindowHandle);
             }
         }
 
