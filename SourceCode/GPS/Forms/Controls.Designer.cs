@@ -122,13 +122,15 @@ namespace AgOpenGPS
                 //position of panel
                 flp1.Top = this.Height -260;
                 flp1.Left = this.Width - 120 - flp1.Width;
-                trackMethodPanelCounter = 3;
+                trackMethodPanelCounter = 4;
             }
 
             PanelUpdateRightAndBottom();
         }
         private void btnAutoSteer_Click(object sender, EventArgs e)
         {
+            longAvgPivDistance = 0;
+
             if (isBtnAutoSteerOn)
             {
                 isBtnAutoSteerOn = false;
@@ -1258,7 +1260,7 @@ namespace AgOpenGPS
             {
                 if (sentenceCounter < 299)
                 {
-                    TimedMessageBox(2000, "Conected", "GPS");
+                    TimedMessageBox(2000, "Connected", "GPS");
                     simulatorOnToolStripMenuItem.Checked = false;
                     return;
                 }
@@ -1614,6 +1616,8 @@ namespace AgOpenGPS
             isPatchesChangingColor = true;
             Settings.Default.setDisplay_colorSectionsDay = sectionColorDay;
             Settings.Default.Save();
+
+            isPatchesChangingColor = true;
         }
         private void btnYouSkipEnable_Click(object sender, EventArgs e)
         {
